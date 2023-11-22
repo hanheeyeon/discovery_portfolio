@@ -632,11 +632,9 @@
     }
     #hamburger.active span:first-child{
         transform: translateY(10px);
-        transform: rotate(30deg);
     }
     #hamburger.active span:last-child{
         transform: translateY(-10px);
-        transform: rotate(30deg);
     }
     /* --------------------------------------------------------------- */
 
