@@ -1,15 +1,8 @@
 $(document).ready(function(){
     //과제 : 햄버거 버튼 클릭하면 메인메뉴 나오면서 햄버거버튼 스위치되도록 처리 
-    $('#hamburger').click(function(){
+   $('#hamburger').click(function(){
         $(this).toggleClass('active');
-
-        let menuHas = $('#hamburger').hasClass('active');
-
-        if(menuHas == true){
-            $('.main-menu').addClass('active');
-        }else{
-            $('.main-menu').removeClass('active');
-        }
+        $('.main-menu').toggleClass('active');
     });
 
     //풀페이지 설정해오기 / 섹션4,5,푸터는 정상 스크롤값으로 설정 / 상단이동버튼 보이게해줘야함 / 풀페이지 부분에는 계속해서 풀페이지 상단영역으로 이동하게된다 이것을 제거해주기
