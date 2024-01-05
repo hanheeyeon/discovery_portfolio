@@ -1,115 +1,737 @@
 @charset "utf-8";
 #hamburger{
     display: none;
-    /* 모바일에서 출력 */
+    /* 미디어에서 출력 */
 }
-
-#wrap{
+/* 헤더 */
+.banner{
+    height: 100vh;
+    /* background-color: lavenderblush; */
+}
+.wrap{
     overflow: hidden;
 }
-
-/* 풀페이지 제작시 section 안쪽에 컨테이너 박스 하나 만들고 높이값 100vh로 맞춰주고 시작(반응형에서는 높이값 다시 auto로 변경) -> 풀페이지 플러그인 먼저 연결하고 진행하면 불편함 */
-.container{
-    height: 100vh;
-}
-
-/* ----------------------------------------------- */
-
-
-/* banner */
 .header-area{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     z-index: 9999;
-    font-size: 0.75rem;
-    color: #fff;
-    text-transform: uppercase;
-
+    background-color: rgba(255,255,255,1);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 32px;
-
-    transition: 0.3s;
+    padding: 0 80px;
+    box-sizing: border-box;
 }
 
+.header-area .header-left{
+    display: flex;
+    align-items: center;
+}
 .header-area .header-logo{
-    width: 214px;
+    width: 143px;
     height: 32px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-    transition: 0.3s;
-}
-.header-area .header-logo svg{
-    fill: #fff;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-.header-area .header-logo:hover svg{
-    opacity: 1;
+    margin-right: 155px;
+    /* position: absolute; */
 }
 
 .header-area .main-menu,
 .header-area .icon-box{
     display: flex;
-    margin-right: -24px;
 }
 
-.header-area .main-menu .menu,
-.header-area .icon-box .icon{
-    margin-right: 24px;
-    font-weight: 300;
-    opacity: 0.8;
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.header-area .main-menu .menu{
+    margin-right: 45px;
+    font-weight: 500;
+    opacity: 1;
     letter-spacing: 1px;
+}
+.main-menu .menu{
+    color: #000;
+    font-size: 16px;
+}
+
+.menu_side{
+    width:auto; 
+    position: fixed; 
+    top:0; right:0; 
+    display: none; 
+    height:100vh; 
+    background: #fff; 
+    z-index: 10;
+    border:0px blue solid;
+}
+.menu_side .side_wrap{
+    width: 100%;
+    margin: 0 auto;
+    border: 0px red solid;
+}
+.menu_side .side_wrap .btn_close{
+    color:red;
+    cursor: pointer;
+    margin: 18px;
+}
+.menu_side .side_wrap .menu_obj{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 0 20px 0 20px;
+    min-width: 300px;
+}
+.menu_side .side_wrap .menu_obj a{
+        text-align: left;
+        font-size: 20px;
+        width: 100%;
+        padding: 15px 0 12px;
+}
+.menu_side .side_wrap .menu_obj a{
+    border-bottom: 1px solid #f2f2f2;
+}
+.svg_obj{
+    width: 30px;
+    text-align: right;
+    float: right;
+    color: #000;
+}
+.dimmed{
+    width:100%; 
+    height:100vh; 
+    background: rgba(0,0,0, 0.5); 
+    position: fixed; 
+    top:0; 
+    left:0; 
+    display: none; 
+    z-index:9;}
+/* ------------------------------------- */
+/* 반응형 미디어쿼리 */
+@media (max-width: 768px){
+    .header-area{
+        height: 50px;
+        padding: 0px 19px;
+    }
+    
+    .header-area .main-menu .menu{
+        font-size: 14px;
+        margin-right: 40px;
+    }
+    .header-area .header-logo{
+        width: 100px;
+        height: 22px;
+        margin-right: 80px;
+    }
+    .icon{
+        display: none;
+    }
+    #hamburger{
+        display: block;
+        width: 20px;
+        height: 10px;
+        z-index: 99999;
+        position: absolute;
+        top: 18px;
+        right: 4%;
+    }
+    #hamburger span{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: #262320;
+        transition: 0.3s;
+    }
+    #hamburger span:nth-child(2){
+        top: 50%;
+    }
+    #hamburger span:nth-child(3){
+        top: 100%;
+    }
+}
+/* 배너 */
+.con2{
+    position: absolute;
+}
+.inner-txt{
+    position: absolute;
+    top:42%;
+    left:15%;
+}
+.con1 .inner-txt h2, h1, p{
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: -0.04em;
+}
+.swiper-button-next, .swiper-button-prev{color:#fff !important;}
+.con2 h1,
+.con2 p{
+    color: #000;
+}
+.con2 .inner-txt h2, h1, p{
+    margin-bottom: 8px;
+    letter-spacing: -0.04em;
+}
+.inner-txt h2{
+    font-weight: 300;
+    font-size: 44px;
+}
+.inner-txt h1{
+    font-size: 56px;
+}
+.inner-txt p{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 200;
+}
+.banner .container{
+    height: 100%;
+}
+.banner .swiper{
+    height: 100%;
+}
+
+.banner .container .con1.main_bg{
+    background: url('../img/banner1.png') center center no-repeat; background-size: cover;
+}
+.banner .container .con2.main_bg{
+    background: url('../img/banner2.png') center center no-repeat; background-size: cover;
+}
+
+@media (max-width: 768px){
+    .header-area .main-menu, .header-area .icon-box{
+        display: none;
+    }
+    .inner-txt{
+        position: relative;
+        width: 80%;
+        margin: 79% auto 0;
+        word-break: keep-all;
+        top:0;
+        left:0;
+    }
+    .banner .container{
+        width: 100%;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        opacity: 0 !important;
+    }
+    .inner-txt h2{
+        font-size: 30px;
+    }
+    .inner-txt h1 {
+        font-size: 42px;
+    }
+    .inner-txt p{
+        font-size: 18px;
+        margin-top: 24px;
+        font-weight: 300;
+    }
+    .img1{
+        display: none;
+    }
+    .img2{
+        display: block;
+    }
+    .banner .container .con1.main_bg{
+        background: url('../img/banner1_m.png') no-repeat center center; 
+    }
+    .banner .container .con2.main_bg{
+        background: url('../img/banner2_m.png') no-repeat center center; 
+    }
+    .banner{
+        height: 70vh;
+    }
+}
+
+/* sec1 */
+.sec-1 .container{
+    width: 1920px;
+    margin: 0 auto;
+    /* width: 1920px;
+    height: 980px; */
+}
+.in-box2{
+    display: flex;
+    width: 1400px;
+    margin: 0 auto;
+}
+.content{
+    width: 25%;
+    margin-right: 20px;
+}
+.sec-1 .content img{
+    opacity: 0;
     transition: 0.3s;
 }
-.header-area .main-menu .menu:hover,
-.header-area .icon-box .icon:hover{
+.sec-1 .content.content1{
+    background: url(../img/sec-1-1.webp) no-repeat center;
+    background-size: cover;
+}
+.sec-1 .content.content2{
+    background: url(../img/sec-1-2.webp) no-repeat center;
+    background-size: cover;
+}
+.sec-1 .content.content3{
+    background: url(../img/sec-1-3.webp) no-repeat center;
+    background-size: cover;
+}
+.sec-1 .content.content4{
+    background: url(../img/sec-1-4.jpg) no-repeat center;
+    background-size: cover;
+}
+.sec-1 .content:hover img{
     opacity: 1;
+    transition: 0.3s;
+}
+.container .in-box1{
+    margin-top: 90px;
+}
+.in-box1 h1{
+    color: #222;
+    font-size: 32px;
+    font-weight: 400;
+    border-bottom: 0px solid #222;
+}
+.in-box2{
+    margin-top: 35px;
+    margin-bottom: 90px;
+}
+.sec-1 h1{
+    display: flex;
+    justify-content: center;
 }
 
-/* -------------------------------------------- */
+@media (max-width: 768px){
+    .sec-1 .container{
+        width: 100%;
+        padding: 10px;
+    }
+    .sec-1 .content:hover img {
+        display: none;
+    }
+    .sec-1 .in-box1 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .sec-1 .in-box1 h1{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .sec-1 .in-box2{
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .sec-1 .content{
+        width: 48%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .sec-1 .content.content2{
+        margin-right: 0;
+    }
+    .sec-1 .content.content4{
+        margin-right: 0;
+    }
+}
 
-/* header active */
-.header-area.active{
-    color: #262320;
+/* sec2 */
+.sec-2{
+    background-color: #EFE2D0;
 }
-.header-area .header-logo svg.active{
-    fill: #262320;
+.sec-2 .container{
+    width: 1400px;
+    /*height: 980px;*/
+    padding: 70px 0;
+    margin: 0 auto;
 }
-.header-area .header-logo.active{
-    width: 164px;
-    height: 24px;
+.sec-2 .swiper-head{
+    color: #222;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-/* -------------------------------------------- */
-/* 하나씩 가려서 확인 */
-/* .sub-menu{
-    opacity: 0;
+.sec-2 .swiper-head span{
+    display: block;
 }
-.sub-menu.about{
-    opacity: 1;
-} */
+.sec-2 .swiper-slide{
+    display: flex;
+    justify-content: space-between;
 
-/* -------------------------------------------- */
-/* 서브메뉴 active */
-.sub-menu-box.active{
-    opacity: 1;
-    z-index: 99;
 }
-.sub-menu-box .sub-menu.active{
-    opacity: 1;
+.sec-2 .swiper-inner-right{
+    width: 50%;
+
+}
+.sec-2 .swiper-inner-box{
+    width: 100%;
+    height: 704px;
+    position: relative;
+}
+.sec-2 .swiper-image{
+    position: absolute;
+}
+.sec-2 .swiper-image.box1{
+    width: 335px;
+    height: 525px;
+    bottom: 0;
+}
+.sec-2 .swiper-image.box2{
+    width: 236px;
+    height: 327px;
+    left: 250px;
+}
+.sec-2 .swiper-image.box3 {
+    width: 217px;
+    height: 324px;
+    bottom: 230px;
+    right: 60px;
+}
+.sec-2 span{
+    font-size: 48px;
+    font-weight: 400;
+}
+.sec-2 .swiper-head{
+    margin: 200px 0 0 200px;
 }
 
+@media (max-width: 1400px){
+    .sec-2 .container{
+        width: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .sec-2 .swiper-slide{
+        display: block;
+    }
+    .sec-2 .swiper-image{
+        position: static;
+    }
+    .sec-2 .swiper-head{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .sec-2 .swiper-inner-right{
+        width: 100%;
+    }
+    .sec-2 .swiper-image.box1,
+    .sec-2 .swiper-image.box2,
+    .sec-2 .swiper-image.box3{
+        width: calc(50% - 20px);
+        height: 500px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .sec-2 .swiper-image.box1 img,
+    .sec-2 .swiper-image.box2 img,
+    .sec-2 .swiper-image.box3 img{
+        object-position: center top;
+    }
+    .sec-2 .swiper-inner-box{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -20px;
+    }
+    .sec-2 .swiper-head span{
+        white-space: nowrap;
+    }
+    
+}
 
-/* -------------------------------------------- */
+@media (max-width: 768px){
+    .sec-2 .container{
+        width: 100%;
+        padding: 24px 28px 16px 28px;
+    }
 
-.sub-menu-box{
+    .sec-2 .swiper-image.box1,
+    .sec-2 .swiper-image.box2,
+    .sec-2 .swiper-image.box3{
+        width: 100%;
+        height: 500px;
+        /* margin-right: 20px;
+        margin-bottom: 20px; */
+    }
+
+    .sec-2 .swiper-head span {
+        white-space: nowrap;
+        font-size: 28px;
+        font-weight: 500;
+    }
+}
+
+/* sec3 */
+.sec-3 .container{
+    width: 1920px;
+    /*height: 780px;*/
+    margin: 0 auto;
+}
+.in-box4{
+    display: flex;
+    width: 1163px;
+    margin: 0 auto;
+}
+.sec-3 .content{
+    width: 50%;
+    margin-right: 20px;
+    height: 373px;
+}
+.container .in-box3{
+    margin-top: 100px;
+}
+.in-box3 h1{
+    color: #222;
+    font-size: 32px;
+    font-weight: 400;
+    border-bottom: 0px solid #222;
+}
+.in-box4{
+    margin-top: 35px;
+    margin-bottom: 118px;
+}
+.sec-3 h1{
+    display: flex;
+    justify-content: center;
+}
+.content p{
+    color: #222;
+    font-size: 32px;
+    font-weight: 400;
+}
+.sec-3 p{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size:24px;
+}
+
+@media (max-width: 768px){
+    .sec-3 .container{
+        width: 100%;
+        padding: 16px;
+    }
+    .sec-3 .in-box3{
+        margin-top: 16px;
+    }
+    .sec-3 .in-box3 h1{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .sec-3 .in-box4{
+        width: 100%;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        padding: 16px;
+    }
+    .sec-3 p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .sec-3 .content{
+        margin-right: 10px;
+        height: 280px;
+        width: 50%;
+    }
+}
+/* sec4 */
+.sec-4{margin:100px 0; position: relative; width: 100%; display: inline-block;}
+.sec-4 h1{font-size:2rem; text-align: center; color:#000;}
+.sec-4 .insta-container{
+    width: 1920px;
+}
+.highlight{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.feed{
+    width: calc(20% - 60px);
+    padding: 20px;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px){
+    .sec-4 {
+        margin: 30px 0;
+    }
+    .sec-4 .insta-container {
+        width: 100%;
+    }
+    .sec-4 h1{
+        font-size: 28px;
+        margin-bottom: 20px 
+    }
+    .feed {
+        width: calc(36% - 18px);
+        padding: 8px;
+        margin: 0;
+    }
+}
+
+/* free*/
+.free .container{
+    width: 1920px;
+    /*height: 340px;*/
+    margin: 0 auto;
+}
+.in-box6{
+    background-color: #aaa;
+    /* width: 1920px; */
+    /*height: 160px;*/
+    padding: 30px 0;
+}
+.free h1{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px){
+    .in-box6{
+        padding: 20px 0;
+    }
+    .free .container{
+        width: 100%;
+    }
+    .free h1{
+        font-size: 12px;
+        font-weight: 300;
+        width: 87%;
+        margin:0 auto;
+        word-break: keep-all;
+    }
+}
+/* footer */
+.footer .container{
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 160px 80px;
+}
+.left h1{
+    color: #333;
+    font-size: 28px;
+    /* margin: 60px 0px 0px 378px; */
+}
+.left p{
+    color: #6a6a6a;
+    font-size: 12px;
+    font-style: 300;
+    line-height: 20px;
+    margin-top: 28px;
+    /* margin: 28px 378px; */
+    white-space: nowrap; 
+}
+.tag-box{
+    display: flex;
+    /* margin: 24px 378px; */
+}
+.footer .icon1{
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+}
+.footer .icon1:last-child{
+    margin-right: 0;
+}
+.footer .right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right p{
+    color: #6a6a6a;
+    /* margin: 70px 0px 0px 378px; */
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+.right h3{
+    font-size: 16px;
+    font-weight: 700;
+    /* margin: 24px 0px 0px 378px; */
+    margin-bottom: 8px;
+    color: #6a6a6a;
+    white-space: nowrap;
+}
+.right span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6a6a6a;
+    /* margin: 8px 378px; */
+    white-space: nowrap;
+}
+.app-box{
+    display: flex;
+    width: 296px;
+    height: 37px;
+    /* margin-right: 378px; */
+    margin-top: 24px;
+}
+
+@media (max-width: 768px){
+    .footer .container{
+        width: 100%;
+        padding: 30px 20px 50px;
+    }
+    .left h1{
+        font-size: 20px;
+    }
+    .left p{
+        font-size: 12px;
+        line-height: 1.3em;
+        margin-top: 24px;
+        white-space: normal; 
+        word-break: keep-all;
+    }
+    .right p{
+        font-size: 14px;
+        line-height: 1.3em;
+        margin-bottom: 10px;
+        margin-top: 24px;
+        flex-wrap: nowrap;
+        word-break: keep-all;
+    }
+    .footer .icon1 {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .right h3{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .right span{
+        font-size: 10px;
+    }
+    .app-box{
+        width: 240px;
+        height: 25px;
+    }
+    .footer .container{
+        flex-direction: column;
+    }
+    .footer .right{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* --------------------------------------------------------------------------------- */
+/* .sub-menu-box{
     position: fixed;
     top: 0;
     left: 0;
@@ -117,690 +739,42 @@
     height: 50%;
     background-color: #fff;
 
-    opacity: 0;
-    z-index: -1;
-    transition: 0.3s;
+    z-index: 999;
+    display: none;
+    padding: 0 378px;
 }
 .sub-menu-box .sub-menu{
-    /* (1230 / 1920) * 100 = 64.0625 */
-    width: 64vw;
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
 
-    /* margin: 0 auto; */
-    /* 서브메뉴 탭 진행시 opacity로 자연스럽게 표현하기 위해서 position 으로 위치 겹쳐놓음 */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
 
-    opacity: 0;
     z-index: 99;
-    transition: 0.3s;
 }
-.sub-menu-box .women .menu-left,
-.sub-menu-box .men .menu-left{
+.sub-menu-box .men .menu{
     display: flex;
-    margin-right: 13vw;
-    height: 277px;
     width: calc(100% - 13vw);
 }
-.sub-menu-box .women .sub-menu-detail,
 .sub-menu-box .men .sub-menu-detail{
     width: 33.333%;
 }
-
-
 .sub-menu-box .sub-menu-head{
-    font-size: 0.875rem;
-    color: #1a1a1e;
-    font-weight: 500;
-}
-.sub-menu-box .sub-menu-body{
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #a8a8a8;
-    margin-top: 8px;
-}
-
-
-
-.sub-menu-box .women .photo,
-.sub-menu-box .men .photo{
-    width: 236px;
-    height: 277px;
-}
-
-/* 이미지 포지션을 전부 center top 으로 맞춤 */
-.sub-menu-box .photo img{
-    object-position: center top;
-}
-.sub-menu-box .collections .photo{
-    width: 472px;
-    height: 277px;
-}
-.sub-menu-box .collections .menu-left{
-    height: 277px;
-}
-.sub-menu-box .collections .sub-menu-detail{
-    margin-bottom: 8px;
-}
-
-.sub-menu-box .about .photo{
-    width: 300px;
-    height: 221px;
-}
-.sub-menu-box .about .sub-menu-detail p{
-    margin-top: 12px;
-    font-size: 0.875rem;
-    color: #1a1a1e;
-}
-
-
-/* ----------------------------------------------------- */
-/* sec1 */
-.sec-1 .container{
-    background-color: #7a7068;
-    position: relative;
-}
-.sec-1 .canvas{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.sec-1 .carousel{
-    display: flex;
-    align-items: center;
-    animation: slide 60s linear infinite;
-}
-/* 과제 : 애니메이션 구동시켜보기 ^^ */
-@keyframes slide {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-.sec-1 .cell{
-    width: 308px;
-    height: 362px;
-    opacity: 0.6;
-    margin-left: -20px;
-}
-.sec-1 .cell:nth-child(even){
-    width: 402px;
-    height: 498px;
-    opacity: 1;
-}
-.sec-1 .cell img{
-    object-position: center top;
-}
-.sec-1 .sec-1-txt{
-    font-family: "silk-serif";
-    font-weight: 300;
-    color: #262320;
-    font-size: 2rem;
-    line-height: 1;
-    text-align: center;
-    width: 42vw;
-    display: flex;
-    height: 100%;
-    align-items: flex-end;
-    padding-bottom: 80px;
-    margin: 0 auto;
-}
-
-/* ----------------------------------------------------- */
-/* sec-2 */
-.sec-2 .container{
-    background: url(../image/collect02.webp) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.sec-2 .txt{
-    font-family: "silk-serif";
-    /* font-size vw 단위로 바꿔보기 -> (px값 * 100) / viewport width */
-    /* (400 * 100) / 1920 = 20.833vw */
-    font-size: 20.833vw;
-    line-height: 1;
-    white-space: nowrap;
-    color: #fff;
-    opacity: .6;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-}
-
-/* ------------------------------------------------------ */
-/* sec3 */
-.bg{
-    background-color: #e5ddc4;
-}
-.sec-3 .container{
-    padding: 80px 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.sec-3 .about-txt{
-    color: #362d26;
-}
-.sec-3 .about-txt-t{
-    font-family: "silk-serif";
-    font-size: 4.5rem;
-    line-height: 1;
-}
-.sec-3 .about-txt-m{
-    text-align: end;
-    text-transform: uppercase;
-    font-size: 1rem;
-}
-.sec-3 .about-txt-b{
-    text-transform: uppercase;
-    font-size: 1rem;
-}
-
-/* ------------------------------------------------------ */
-/* sec4 */
-.sec-4{
-    border-top: 1px dashed #fff;
-    border-bottom: 1px dashed #fff;
-}
-.sec-4 .container{
-    /* (1230 / 1920) * 100 = 64.0625vw */
-    width: 64vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.sec-4 .mask{
-    width: 25vw;
-    min-width: 450px;
-    /* 유동값으로 처리하면 반응형 사이즈에서 생각보다 많이 줄어들 수 있음 -> 최소너비 설정해줌  */
-    height: 661px;
-    overflow: hidden;
-    margin-right: 7vw;
-    border-top-left-radius: 300px;
-    border-top-right-radius: 300px;
-}
-
-.sec-4 .ceo-txt{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.sec-4 .ceo-txt .ceo-head{
-    width: 604px;
-    height: 126px;
-}
-.sec-4 .ceo-txt .ceo-body{
-    width: 23vw;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 16px;
-    color: #333;
-}
-
-/* --------------------------------------------------------------- */
-/* sec5 */
-.sec-5{
-    padding-top: 64px;
-}
-.sec-5 .container{
-    width: 80vw;
-    margin: 0 auto;
-    height: auto;
-}
-.sec-5 .head-txt{
-    font-family: "silk-serif";
-    font-weight: 300;
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    text-align: end;
-    line-height: 0.9;
-    margin-bottom: 20px;
-}
-.sec-5 .store-gallery{
-    display: flex;
-    border-bottom: 1px solid #362d26;
-}
-.sec-5 .left{
-    width: calc(100% - 32vw);
-    display: flex;
-    border-right: 1px solid #362d26;
-}
-.sec-5 .left .box1{
-    margin-top: 20px;
-    margin-bottom: 60px;
-}
-.sec-5 .right{
-    width: 32vw;
-    display: flex;
-    justify-content: flex-end;
-}
-.sec-5 .box1{
-    width: 449px;
-    height: 616px;
-}
-.sec-5 .box2{
-    width: 357px;
-    height: 490px;
-    margin-left: -20px;
-}
-
-/* ------------------------------------------------------ */
-/* footer */
-.footer .container{
-    height: auto;
-    width: 80vw;
-    margin: 0 auto;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 60px 0 80px;
-}
-.footer .footer-t {
-    display: flex;
-}
-.footer .footer-t .box{
-    width: 20%;
-    height: 300px;
-    padding: 16px;
-}
-.footer .footer-t .box h1{
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 16px;
-}
-.footer .footer-t .box p{
-    font-size: 1rem;
-    color: #6a6a6a;
-    margin-bottom: 8px;
-}
-.footer .footer-t input{
-    border: none;
-    outline: none;
-    padding: 8px 10px;
-    border-bottom: 1px solid rgba(106, 106, 106, 0.6);
-    width: 100%;
-    margin-bottom: 40px;
-    background: transparent;
-}
-.footer .footer-t input::placeholder{
-    color: rgba(106, 106, 106, 0.6);
-    opacity: 1;
-    transition: 0.3s;
-}
-.footer .footer-t input:focus::placeholder{
-    opacity: 0;
-}
-
-.footer .footer-t .footer-btn{
-    width: 100%;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(168, 168, 168, 0.3);
-    font-size: 0.75rem;
-    color: rgba(0, 0, 0, 0.8);
-    transition: 0.3s;
-}
-.footer .footer-t .footer-btn:hover{
-    background: rgba(168, 168, 168, 0.5);
-}
-
-.footer .footer-b .copyright{
-    font-size: 1rem;
-    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    color: #000;
     font-weight: 600;
 }
-/* 상단이동버튼 */
-/* 너비 높이 90px 짜리 밖에 부분만 돌아가는 상단이동버튼 만들어주기 */
-/* 가상요소로 너비 높이 70px 짜리 Lemaire_topbtn-i-black.svg이미지 넣어주기 위치는 상단과 좌측에서 10px씩 떨어져있도록 처리 */
-/* 밖에 있는 도형만 돌아가게 처리해보기 */
-.top-btn{
-    width: 90px;
-    height: 90px;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    cursor: pointer;
-    z-index: 9999;
-
-    display: none;
+.sub-menu-box .sub-menu-body{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a6a6a;
+    margin-top: 12px;
 }
-.top-btn img{
-    animation: topbtn 30s linear infinite;
+.sub-menu-box.active{
+    opacity: 1;
+    z-index: 99;
 }
-.top-btn::after{
-    content: '';
-    background: url(../image/Lemaire_topbtn-i-black.svg) no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 70px;
-    height: 70px;
-}
-
-@keyframes topbtn {
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-/* ------------------------------------------------- */
-/* 반응형 미디어쿼리 */
-@media (max-width: 1800px){
-    .fp-section,
-    .fp-slide,
-    .fp-tableCell{
-        height: auto !important;
-    }
-    .header-area{
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #262320;
-    }
-    .header-area .header-logo svg{
-        fill: #262320;
-        opacity: 1;
-    }
-    .header-area .main-menu .menu,
-    .header-area .icon-box .icon{
-        opacity: 1;
-        font-weight: 500;
-    }
-
-    .sec-5 .store-gallery{
-        display: block;
-        border: 0;
-    }
-    .sec-5 .left{
-        border: 0;
-        width: 100%;
-    }
-    .sec-5 .left .box1{
-        margin-top: 0;
-        width: 50%;
-        height: 700px;
-    }
-    .sec-5 .left .box2{
-        margin-left: 20px;
-        width: 50%;
-        height: 700px;
-    }
-    .sec-5 .right{
-        display: none;
-    }
-}
-
-/* ------------------------------------------------------------------------------- */
-@media (max-width: 1400px){
-    .sec-3 .about-txt-t{
-        font-size: 3.75vw;
-    }
-    .sec-4 .container{
-        display: block;
-        height: auto;
-        padding: 100px 0;
-    }
-    .sec-4 .mask{
-        width: 50%;
-        margin-right: auto;
-    }
-    .sec-4 .ceo-txt{
-        margin-top: 20px;
-    }
-    .sec-4 .ceo-txt .ceo-body{
-        width: 100%;
-        line-height: 1.3;
-    }
-
-    .sec-5 .left .box1,
-    .sec-5 .left .box2{
-        height: 500px;
-    }
-
-    .footer .container{
-        width: 100%;
-        padding: 32px;
-    }
-    .footer .footer-t{
-        flex-wrap: wrap;
-    }
-}
-
-/* ------------------------------------------------------------------------------- */
-
-@media (max-width:1000px){
-    .sub-menu-box,
-    .header-area .icon-box{
-        display: none;
-    }
-    .header-area .main-menu{
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(255,255,255,0.5);
-        position: fixed;
-        top: 0;
-        left: 0;
-        color: #1a1a1e;
-        font-size: 8vw;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 20% 10%;
-        /* 좌우 1000px 기준 100px */
-        transform: translateY(-100%);
-        transition: 0.3s;
-    }
-    #hamburger{
-        display: block;
-        width: 20px;
-        height: 10px;
-        z-index: 99999;
-        position: relative;
-    }
-    #hamburger span{
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #262320;
-        transition: 0.3s;
-    }
-    #hamburger span:first-child{
-        top: 0;
-        left: 0;
-    }
-    #hamburger span:last-child{
-        top: 100%;
-        left: 0;
-    }
-
-    /* --------------------------------------------------------------- */
-    /* 햄버거메뉴,메인메뉴 active */
-    .header-area .main-menu.active{
-        transform: translateY(0);
-    }
-    #hamburger.active span:first-child{
-        transform: translateY(10px);
-    }
-    #hamburger.active span:last-child{
-        transform: translateY(-10px);
-    }
-    /* --------------------------------------------------------------- */
-
-    .sec-1 .container{
-        height: auto;
-        background: none;
-    }
-    .sec-1 .canvas{
-        position: static;
-        /* position: absolute; 정상값으로 돌리기 */
-        transform: translateY(0);
-        display: block;
-    }
-    .sec-1 .carousel{
-        animation: none;
-        flex-wrap: wrap;
-    }
-    .sec-1 .carousel.box2,
-    .sec-1 .sec-1-txt{
-        display: none;
-    }
-    .sec-1 .cell,
-    .sec-1 .cell:nth-child(even){
-        width: 50%;
-        height: 740px;
-        margin-left: 0;
-        opacity: 1;
-    }
-
-    .sec-3 .about-txt-b{
-        font-size: 0.8rem;
-    }
-
-    .sec-4 .mask{
-        width: 100%;
-        border-top-left-radius: 400px;
-        border-top-right-radius: 400px;
-        height: 610px;
-    }
-    .sec-4 .ceo-txt .ceo-body{
-        line-height: 1.5;
-    }
-
-    .sec-5 .container{
-        width: 100%;
-        padding: 0 32px;
-    }
-    .sec-5 .head-txt{
-        font-size: 3.5rem;
-        margin-bottom: 12px;
-    }
-
-    .footer .footer-t .box{
-        width: 50%;
-        height: auto;
-        margin-bottom: 32px;
-    }
-
-    .top-btn{
-        right: 32px;
-        bottom: 32px;
-    }
-}
-
-/* ------------------------------------------------------------------------------- */
-@media(max-width: 760px){
-    .header-area{
-        height: 50px;
-        padding: 0 16px;
-    }
-    .header-area .header-logo{
-        width: 164px;
-        height: 24px;
-    }
-    .sec-1 .cell,
-    .sec-1 .cell:nth-child(even){
-        width: 100%;
-        height: 80vh;
-    }
-
-    .sec-2 .container{
-        height: 700px;
-    }
-
-    .sec-3 .container{
-        padding: 68px 16px;
-    }
-
-    .sec-4 .container{
-        width: 100%;
-        padding: 100px 16px;
-    }
-    .sec-4 .ceo-txt {
-        margin-top: 32px;
-    }
-    .sec-4 .ceo-txt .ceo-head{
-        width: 100%;
-    }
-    .sec-4 .ceo-txt .ceo-head img{
-        object-fit: contain;
-    }
-
-    .sec-5 .container{
-        padding: 0 16px;
-    }
-    .sec-5 .head-txt{
-        text-align: left;
-    }
-
-    .footer .container{
-        padding: 32px 16px;
-    }
-    .footer .footer-t .box{
-        width: 100%;
-        padding-top: 32px;
-        border-top: 1px solid #f0f0f0;
-    }
-}
-
-/* ------------------------------------------------------------------------------- */
-@media (max-width: 525px){
-    .sec-2 .container{
-        background-attachment: scroll;
-    }
-
-    .sec-3 .container{
-        height: 700px;
-        padding: 32px 16px;
-    }
-    .sec-3 .about-txt-t {
-        font-size: 5.75vw;
-    }
-
-    .sec-4 .mask{
-        height: 510px;
-    }
-    .sec-4 .ceo-txt .ceo-body{
-        font-size: 0.8rem;
-    }
-
-    .sec-5 .head-txt{
-        font-size: 3rem;
-    }
-    .sec-5 .left{
-        flex-wrap: wrap;
-    }
-    .sec-5 .left .box1,
-    .sec-5 .left .box2{
-        width: 100%;
-    }
-    .sec-5 .left .box1{
-        margin-bottom: 20px;
-    }
-    .sec-5 .left .box2{
-        margin-left: 0;
-    }
-    .footer .footer-t .box{
-        margin-bottom: 0;
-        padding: 16px 0;
-    }
-    .footer .footer-t .box h1,
-    .footer .footer-t .box p{
-        font-size: 0.8rem;
-    }
-    .footer .footer-b{
-        margin-top: 32px;
-        margin-bottom: 16px;
-    }
-}
+.sub-menu-box .sub-menu.active{
+    opacity: 1;
+} */

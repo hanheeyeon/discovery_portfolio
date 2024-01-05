@@ -1,71 +1,58 @@
 $(document).ready(function(){
-    //과제 : 햄버거 버튼 클릭하면 메인메뉴 나오면서 햄버거버튼 스위치되도록 처리 
-   $('#hamburger').click(function(){
-        $(this).toggleClass('active');
-        $('.main-menu').toggleClass('active');
-    });
-
-    //풀페이지 설정해오기 / 섹션4,5,푸터는 정상 스크롤값으로 설정 / 상단이동버튼 보이게해줘야함 / 풀페이지 부분에는 계속해서 풀페이지 상단영역으로 이동하게된다 이것을 제거해주기
-    new fullpage('#wrap', {
-        scrollBar : true,
-        normalScrollElements : '.sec-4,.sec-5,.footer',
-        fitToSection: false,
-        scrollingSpeed: 300,
-        responsiveWidth: 1800,
-        responsiveHeight: 890,
-    });
-
-    // sub-menu
-    // 마우스 올리면 카테고리에 맞는 탭 활성화 / 헤더 색상변경 / 서브메뉴 박스에서 마우스 나가면 기존 상태로 다시 변경
-    $('.main-menu li').mouseenter(function(){
-        let result = $(this).attr('data-tab');
-        $('.sub-menu').removeClass('active');
-        $(`#${result}`).addClass('active');
-
-        //서브메뉴박스도 보이게 처리
-        $('.sub-menu-box').addClass('active');
-
-        //헤더 색상 변경
-        $('.header-area,.header-logo svg').addClass('active');
-    });
-
-    $('.sub-menu-box').mouseleave(function(){
-        $(this).removeClass('active');
-        $('.header-area,.header-logo svg').removeClass('active');
-    });
-
-
-
-
-
-    //sec-4 swiper
-    //세로 자동으로 굴러가는 스와이퍼 연결해보기
+    //스와이퍼
+    //메인상단 hero영역 슬라이더
     var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
+        effect: "fade",
         loop:true,
-        speed: 500,
         autoplay:{
-            delay: 1500,
+            delay:3000
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
     });
-  
 
-
-    // 상단이동버튼 300px 이상일때 최상단으로 올라가는 상단이동버튼 구현해보기(배너에서 없어져있다가 sec1에서부터 보이게) -> 클릭했을때 최상단으로 이동하는 부분까지!
-    $(window).scroll(function(){
-        let sct = $(window).scrollTop();
-        if(sct >= 300){
-            $('.top-btn').fadeIn();
-        }else{
-            $('.top-btn').fadeOut();
-        }
+    var swiper = new Swiper(".youSwiper", {
+        effect: "",
+        loop:true,
+        autoplay:{
+            delay:3000
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
     });
 
-    $('.top-btn').click(function(){
-        $('html,body').animate({
-            scrollTop: 0
-        },500);
+    // 서브메뉴
+    $(document).ready(function(){
+        console.log("제이쿼리");
+        $("#hamburger").click(function(){
+            //햄버거 버튼 클릭시 이벤트
+            $(".menu_side").show();
+            $("#hamburger").hide();
+            $(".dimmed").show();
+            $(".btn_close").click(function(){
+                //닫기 버튼 클릭시 이벤트
+                $(".menu_side").hide();
+                $("#hamburger").show();
+                $(".dimmed").hide();
+            });
+        });
     });
+    
+    // $('.main-menu li').mouseenter(function(){
+    //     let result = $(this).attr('data-tab');
+    //     $('.sub-menu').removeClass('active');
+    //     $(`#${result}`).addClass('active');
 
+    //     //서브메뉴박스도 보이게 처리
+    //     $('.sub-menu-box').addClass('active');
+    // });
 
+    // $('.sub-menu-box').mouseleave(function(){
+    //     $(this).removeClass('active');
+    //     $('.header-area,.header-logo svg').removeClass('active');
+    // });
 });
