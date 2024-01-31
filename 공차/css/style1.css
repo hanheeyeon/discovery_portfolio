@@ -1263,7 +1263,7 @@
     }
     .sec-4 .wrap .right-box {
         margin-right: 0;
-        width: 100%;
+        width: block;
     }
     .sec-4 .right-box{
         background: url(../img/sec4-2m-1.jpg) no-repeat center top;
