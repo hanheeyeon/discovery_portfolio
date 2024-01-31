@@ -1446,14 +1446,6 @@
         width: 120px;
         margin: 0 0 24px 0;
     }
-    .wrap .con1{
-        background: url(../img/banner1m-2.jpg) no-repeat center center;
-        background-size: cover;
-    }
-    .wrap .con2{
-        background: url(../img/banner2m-4.jpg) no-repeat left top;
-        background-size: cover;
-    }
     .swiper-button-next:after, .swiper-button-prev:after{
         font-size: 30px !important;
     }
