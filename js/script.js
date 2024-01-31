@@ -1,55 +1,88 @@
 $(document).ready(function(){
-    //스와이퍼
-    //메인상단 hero영역 슬라이더
-    var swiper = new Swiper(".mySwiper", {
-        effect: "fade",
-        loop:true,
-        autoplay:{
-            delay:3000
+  $('.menu-btn').click(function(){
+    $(this).toggleClass('active');
+    $('.main-menu').toggleClass('active');
+});
+
+
+  const ww = $(window).width();
+
+  if(ww >= 960){
+  //배너 스와이퍼
+  var swiper = new Swiper(".mySwiper", {
+    loop:true, 
+    speed: 2000, 
+
+    autoplay: {
+      delay: 1500,
+    },
+    pagination: {
+      el: ".swiper-pagination", 
+      clickable: true, 
+    },
+  });
+
+  }else{
+
+  }
+
+
+    //슬라이드 스와이퍼
+    var swiper = new Swiper(".weSwiper", {
+      /*effect: "fade",*/
+      slidesPerView:4,
+      spaceBetween: 30,
+      loop:true,
+      breakpoints : {
+            1760:{
+            slidesPerView:4,
+
+            },
+            1200:{
+            slidesPerView:3,
+
+            },
+            760:{
+            slidesPerView:2,
+
+            },
+            500:{
+            slidesPerView:1,
+
+            },
+            375:{
+            slidesPerView:1,
+            
+          }
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 
-    var swiper = new Swiper(".youSwiper", {
-        effect: "",
-        loop:true,
-        autoplay:{
-            delay:3000
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-    });
+  // 서브메뉴
+  $('.main-menu li').mouseenter(function(){
+    let result = $(this).attr('data-tab');
 
-    // 서브메뉴
-    $("#hamburger").click(function(){
-        //햄버거 버튼 클릭시 이벤트
-        $(".menu_side").show();
-        $("#hamburger").hide();
-        $(".dimmed").show();
-        $(".btn_close").click(function(){
-            //닫기 버튼 클릭시 이벤트
-            $(".menu_side").hide();
-            $("#hamburger").show();
-            $(".dimmed").hide();
-        });
-    });
-    
-    // $('.main-menu li').mouseenter(function(){
-    //     let result = $(this).attr('data-tab');
-    //     $('.sub-menu').removeClass('active');
-    //     $(`#${result}`).addClass('active');
+    $('.sub-menu-box').addClass('active');
+});
 
-    //     //서브메뉴박스도 보이게 처리
-    //     $('.sub-menu-box').addClass('active');
-    // });
+  $('.sub-menu-box').mouseleave(function(){
+    $(this).removeClass('active');
+});
 
-    // $('.sub-menu-box').mouseleave(function(){
-    //     $(this).removeClass('active');
-    //     $('.header-area,.header-logo svg').removeClass('active');
-    // });
+// tab메뉴
+$('.btn li').click(function(){
+
+  $(this).addClass('active');
+  $(this).siblings().removeClass('active');
+
+  const result = $(this).attr('data-alt');
+
+  $('.tabs div').removeClass('active');
+  $(`#${result}`).addClass('active');
+});
+
+
 });

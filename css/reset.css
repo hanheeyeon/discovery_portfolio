@@ -1,7 +1,27 @@
 @charset "utf-8";
 
-/* 프리텐다드 웹폰트 연결 */
-@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
+/* @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+} */
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url(../line_seed_fonts/LINESeedKR-Bd.otf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url(../line_seed_fonts/LINESeedKR-Rg.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url(../line_seed_fonts/LINESeedKR-Th.otf);
+    font-weight: 300;
+}
+
 
 *{
     margin: 0;
@@ -18,10 +38,11 @@ img,svg{
 }
 html,body{
     font-size: 100%;
-    font-family: 'Pretendard';
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    font-family: 'LINESeedKR-Bd';
 }
 a{
     text-decoration: none;
     color: inherit;
+    display: block;
 }
