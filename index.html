@@ -2,327 +2,306 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery</title>
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link  rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+    <link rel="stylesheet" href="./css/style.css">    
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+     <!-- swiper -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- js -->
     <script src="./js/jquery-1.12.4.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
-    <script src="./js/fullpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
-    <title>Dior</title>
 </head>
 <body>
-    <div id="wrap">
+    <div class="wrap">
+        <!-- 배너 -->
+        <section class="banner">
+            <header class="header-area">
+                <div class="header-left">
+                    <a href="#none" class="header-logo">
+                        <img src="./img/banner_logo.png" alt="">
+                    </a>
+    
+                    <ul class="main-menu">
+                        <li data-tab="tab1"><a href="#none" class="menu">MEN</a></li>
+                        <li data-tab="tab2"><a href="#none" class="menu">WOMEN</a></li>
+                        <li data-tab="tab3"><a href="#none" class="menu">SHOES</a></li>
+                        <li data-tab="tab4"><a href="#none" class="menu">ACC</a></li>
+                        <li data-tab="tab4"><a href="#none" class="menu">KIDS</a></li>
+                    </ul>    
+                </div>
+                <!-- 아이콘박스 -->
+                <div class="icon-box">
+                    <div class="icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66.782 66.4336L54.3198 53.9714" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M13.5775 30.724C15.8197 22.3559 22.3559 15.8197 30.724 13.5775C39.092 11.3353 48.0206 13.7277 54.1464 19.8536C60.2723 25.9794 62.6647 34.908 60.4225 43.276C58.1802 51.6441 51.6441 58.1802 43.276 60.4225C34.908 62.6647 25.9794 60.2723 19.8536 54.1464C13.7277 48.0206 11.3353 39.092 13.5775 30.724Z" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60 70.0002H20C17.7909 70.0002 16 68.2094 16 66.0002V64.6639C16 58.8513 19.6061 53.6486 25.049 51.6087C34.6889 47.9957 45.3111 47.9957 54.951 51.6087C60.3939 53.6486 64 58.8513 64 64.6639V66.0002C64 68.2094 62.2091 70.0002 60 70.0002Z" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M33.901 38.8673C37.729 40.8336 42.2702 40.8336 46.0981 38.8673C49.6607 37.0373 52.2131 33.7042 53.0512 29.7878L53.2748 28.7425C54.1318 24.7375 53.2164 20.5576 50.764 17.2773L50.4049 16.797C47.9521 13.5163 44.0958 11.5845 39.9996 11.5845C35.9034 11.5845 32.047 13.5163 29.5943 16.797L29.2352 17.2773C26.7827 20.5576 25.8674 24.7375 26.7243 28.7425L26.948 29.7878C27.786 33.7042 30.3385 37.0373 33.901 38.8673Z" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="icon bag">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.7125 31.9162C17.8778 30.8148 18.8239 30 19.9376 30H60.0623C61.176 30 62.1222 30.8148 62.2874 31.9162L67.6124 67.4162C67.8165 68.7766 66.7629 70 65.3873 70H14.6126C13.2371 70 12.1835 68.7766 12.3875 67.4162L17.7125 31.9162Z" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M52 38V22C52 15.3726 46.6274 10 40 10C33.3726 10 28 15.3726 28 22V38" stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- 미디어 햄버거버튼 -->
+                <a href="#none" id="hamburger">
+                    <span></span><span></span><span></span>
+                </a>
+                
+                <!--sidemenu-->
+                <div class="menu_side">
+                    <div class="side_wrap">
+                        <div class="btn_close">
+                            <div class="svg_obj">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z" fill="currentColor"></path></svg>
+                            </div>
+                        </div>
+                        <div class="menu_obj">
+                            <a href="">MEN</a>
+                            <a href="">WOMEN</a>
+                            <a href="">SHOES</a>
+                            <a href="">ACC</a>
+                            <a href="">KIDS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimmed"></div>
+            </header>
 
-        <!-- banner 영역 -->
-        <section class="banner section">
+            <!-- 배너 슬라이드 -> 스와이퍼 진행 -->
             <div class="container">
-                <!-- header 영역 -->
-                <header class="header-area">
-                    <div class="header-logo">
-                        <a href="#none" class="logo">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.5 138.3">
-                                <path d="M1.5 2.7h64.2c55.2 0 76.8 32.4 76.8 66.7 0 34.9-27.7 66-80.4 66H1.6c-1.1 0-1.5-.7-1.5-1.3 0-.7.7-1.3 1.7-1.3h11.3c3.5 0 5.8-2.1 5.8-6V11.5c0-2.9-1.4-6.1-6-6.1H1.4C.5 5.4 0 4.8 0 4.1c0-.6.2-1.4 1.5-1.4m40.1 126.5c0 2.9 1.3 3.8 3.2 3.8h17c41.9 0 57.1-32.1 57.1-64.3S102.8 5.3 67.4 5.3H44.3c-2.4 0-2.6 2-2.6 2.9l-.1 121zM148.9 2.7c-1 0-1.9.4-1.9 1.2 0 .8.5 1.3 1.4 1.3h11.3c2.6 0 5.1 1.8 5.1 6.8v114.9c0 2.4-1.8 6-5 6h-11.2c-1.3 0-1.4 1-1.4 1.4 0 .4-.1 1.1 1.4 1.1H203c.8 0 1.9-.1 1.9-.9s-.2-1.6-1.6-1.6h-10.5c-1.5 0-5.6-.9-5.6-5.5V10.8c0-3.3 2.1-5.5 5.9-5.5h10.3c.9 0 1.4-.5 1.4-1.2s-.5-1.3-1.7-1.3h-54.2zm85 66.4c0-36.7 16.4-66.4 47.2-66.4 30.2 0 47.2 29.7 47.2 66.4s-15.5 66.4-47.2 66.4c-30.7.1-47.2-29.7-47.2-66.4m47.2 69.2c43.8 0 71.4-31 71.4-69.1S325.2 0 281.1 0c-44 0-71.4 31-71.4 69.1s28.5 69.2 71.4 69.2m211.4-3.7c-17.2 1.8-26.7-26.4-35.4-39.8-6.5-9.9-20.3-20-33.9-22 22.4-1.3 47.5-8.5 47.5-33.9 0-20.6-12.7-36.2-59.3-36.2h-53.7c-.7 0-1.4.4-1.4 1.2 0 .8.7 1.3 1.4 1.3H370c2.6 0 5.1 1.8 5.1 6.8v114.9c0 2.4-1.8 6-5 6H358c-1 0-1.4.8-1.4 1.2s.4 1.3 1.4 1.3h57c.8 0 1.5-.4 1.5-1.2 0-.8-.5-1.3-1.6-1.3h-11.5c-1.5 0-5.6-1-5.6-5.5V73.1h5.9c28.2 0 30.3 30.6 44.3 48.1 12 15 27.7 16.9 36.6 16.9 3.8 0 6.4-.1 8.8-.7 1.5-.5 1.8-3.1-.9-2.8m-89-129.4h8.3c14.2 0 37.2 5.6 37.2 32.4 0 24.6-20.4 32.9-39.3 32.9h-12.1V10.8c0-3.4 2.1-5.6 5.9-5.6"></path>
+                <div class="swiper mySwiper">
+                    <div class="con-box swiper-wrapper">
+                        <div class="con1 swiper-slide main_bg">
+                            <div class="inner-txt">
+                                <h2>겨울의 일상을 그리다</h2>
+                                <h1>Winter Story With 고윤정</h1>
+                                <p>#우먼스윈터컬렉션 #프리미엄구스퍼패딩</p>
+                            </div>
+                        </div>
+        
+                        <div class="con2 swiper-slide main_bg">
+                            <div class="inner-txt">
+                                <h2>일상에 더하는 특별함</h2>
+                                <h1>베르겐 구스다운 컬렉션</h1>
+                                <p>#고어윈드스토퍼패딩 #유러피안구스다운패딩</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>    
+                </div>
+            </div>
+        </section>
+        
+        <!-- sec1 -->
+        <section class="sec-1">
+            <div class="container">
+                <div class="in-box1">
+                    <h1>
+                        매 순간, Be Yourself Be Discovery
+                    </h1>
+                </div>
+                <div class="box">
+                    <div class="in-box2">
+                        <div class="content content1">
+                            <img src="./img/sec-1-hover1.png" alt="">
+                        </div>
+                        <div class="content content2">
+                            <img src="./img/sec-1-hover2.jpg" alt="">
+                        </div>
+                        <div class="content content3">
+                            <img src="./img/sec-1-hover3.jpg" alt="">
+                        </div>
+                        <div class="content content4">
+                            <img src="./img/sec-1-4-hover4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- sec2 -->
+        <section class="sec-2">
+            <div class="container">
+                <div class="swiper youSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h1 class="swiper-head">
+                                <span>고윤정의</span>
+                                <span>프리미엄 윈터 컬렉션</span>
+                            </h1>
+                            <div class="swiper-inner-right">
+                                <div class="swiper-inner-box">
+                                    <div class="swiper-image box1"><img src="./img/sec-2-1.webp" alt=""></div>
+                                    <div class="swiper-image box2"><img src="./img/sec-2-2.webp" alt=""></div>
+                                    <div class="swiper-image box3"><img src="./img/sec-2-3.webp" alt=""></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h1 class="swiper-head">
+                                <span>공유의</span>
+                                <span>프리미엄 윈터 컬렉션</span>
+                            </h1>
+                            <div class="swiper-inner-right">
+                                <div class="swiper-inner-box">
+                                    <div class="swiper-image box1"><img src="./img/sec-2-4.webp" alt=""></div>
+                                    <div class="swiper-image box2"><img src="./img/sec-2-5.webp" alt=""></div>
+                                    <div class="swiper-image box3"><img src="./img/sec-2-6.webp" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sec3 -->
+        <section class="sec-3">
+            <div class="container">
+                <div class="in-box3">
+                    <h1>
+                        쌀쌀해지는 날씨, 포근함이 필요할 때
+                    </h1>
+                </div>
+                <div class="in-box4">
+                    <div class="content">
+                        <img src="./img/sec-3-1.webp" alt="">
+                        <p>뛰어난 보온성과 편안함 가득</p>
+                    </div>
+                    <div class="content">
+                        <img src="./img/sec-3-2.webp" alt="">
+                        <p>여유로운 일상 속의 편안함</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sec4 -->
+        <section class="sec-4">
+            <div class="insta-container">
+                <div class="profile">
+                    <h1>@discoveryexpediton_kr</h1>
+                </div>
+
+                <div class="highlight">
+                    <div class="feed">
+                        <img src="./img/sec41.jpg" alt="">
+                    </div>
+
+                    <div class="feed">
+                        <img src="./img/sec42.jpg" alt="">
+                    </div>
+
+                    <div class="feed">
+                        <img src="./img/sec43.jpg" alt="">
+                    </div>
+
+                    <div class="feed">
+                        <img src="./img/sec44.jpg" alt="">
+                    </div>
+
+                    <div class="feed">
+                        <img src="./img/sec45.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- free -->
+        <div class="free">
+            <div class="container">
+                <div class="in-box6">
+                    <h1>Discovery 온라인 공식몰은 구매금액 상관없이 전 상품 무료배송 & 무료반품</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="left">
+                    <h1>DISCOVERY</h1>
+                    <p>주소:서울특별시 강남구 연주로 541 에프엔에프빌딩 (주)에프엔에프/대표:김창수<br>
+                        사업자등록번호:153-81-02451<br>
+                        통신판매업 신고번호: 제2021-서울강남-033353<br>
+                        E-MAIL:discovery@fnfcorp.com l FAX:02-520-0091
+                    </p>
+                </div>
+
+                <div class="right">
+                    <div class="right-t">
+                        <p>
+                            <a href="#none">공지사항</a>
+                        </p>
+                        <p>
+                            <a href="#none">매장안내</a>
+                        </p>
+                        <p>
+                            <a href="#none">제휴문의</a>
+                        </p>
+                        <span>
+                            <a href="#none">개인정보처리방침</a>
+                        </span>
+                        <p>
+                            <a href="#none">고객센터</a>
+                        </p>
+                        <p>
+                            <a href="#none">1:1</a>
+                        </p>
+                        <p>
+                            <a href="#none">고객상담</a>
+                        </p>
+                        <p>
+                            <a href="#none">사이트맵</a>
+                        </p>
+                    </div>
+
+                    <div class="tag-box">
+                        <div class="icon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                <path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/>
                             </svg>
-                        </a>
-                    </div>
-
-                    <!-- menu 영역 -->
-                    <nav>
-                        <ul class="menu">
-                            <li data-alt="tab1">
-                                <a href="#none">WHAT's NEW</a>
-                            </li>
-                            <li data-alt="tab2">
-                                <a href="#none">패션</a>
-                            </li>
-                            <li data-alt="tab3">
-                                <a href="#none">가방</a>
-                            </li>
-                            <li data-alt="tab4">
-                                <a href="#none">향수</a>
-                            </li>
-                            <li data-alt="tab5">
-                                <a href="#none">메이크업</a>
-                            </li>
-                            <li data-alt="tab6">
-                                <a href="#none">주얼리</a>
-                            </li>
-                        </ul>
-                        <!-- icon-box 영역 -->
-                        <ul class="icon-box">
-                            <li>
-                                <a href="#none">
-                                    <img src="./img/search.svg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <img src="./img/cart.svg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#none">
-                                    <img src="./img/user.svg" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
-
-                <!-- sub-menu-box 영역 -->
-                <div class="sub-menu-box">
-                    <ul id="tab1" class="sub-menu">
-                        <li>여성 신제품</li>
-                        <li>남성 신제품</li>
-                        <li>2024 봄/여름 컬렉션</li>
-                    </ul>
-                    <ul id="tab2" class="sub-menu">
-                        <li>재킷</li>
-                        <li>코트</li>
-                        <li>니트</li>
-                        <li>드레스</li>
-                        <li>모자 & 넥타이</li>
-                    </ul>
-                    <ul id="tab3" class="sub-menu">
-                        <li>탑핸들백</li>
-                        <li>토트백</li>
-                        <li>미니백</li>
-                        <li>크로스백 & 숄더백</li>
-                        <li>백팩</li>
-                    </ul>
-                    <ul id="tab4" class="sub-menu">
-                        <li>미스 디올</li>
-                        <li>쟈도르</li>
-                        <li>쁘와종</li>
-                        <li>소바쥬</li>
-                        <li>디올 옴므</li>
-                        <li>하이어</li>
-                    </ul>
-                    <ul id="tab5" class="sub-menu">
-                        <li>쿠션</li>
-                        <li>파운데이션</li>
-                        <li>마스카라</li>
-                        <li>아이섀도우</li>
-                        <li>립스틱</li>
-                        <li>립 틴트</li>
-                    </ul>
-                    <ul id="tab6" class="sub-menu">
-                        <li>반지</li>
-                        <li>귀걸이</li>
-                        <li>목걸이</li>
-                        <li>팔찌</li>
-                        <li>웨딩 반지</li>
-                        <li>시계</li>
-                    </ul>
-                </div>
-
-                <!-- 슬라이더 :  스와이퍼로 변경 예정 -->
-                <div class="mask swiper mySwiper">
-                    <div class="slider swiper-wrapper">
-                      <div class="in-slider fi swiper-slide"></div>
-                      <div class="in-slider se swiper-slide"></div>
-                      <div class="in-slider th swiper-slide"></div>
-                      <div class="in-slider fo swiper-slide"></div>
-                      <div class="in-slider fif swiper-slide"></div>
-                    </div>
-
-                    <!-- 슬라이드 컨텐트 영역 -->
-                    <div class="slider-content-box">
-                        <ul class="arrow-btn">
-                            <li class="slide-prev swiper-button-prev"></li>
-                            <li class="slide-next swiper-button-next"></li>
-                        </ul>
-                        <ul class="slide-content">
-                            <li class="content-inner">
-                                <h2>디올</h2>
-                                <span>여성</span>
-                                <span>남성</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>              
-            </div>
-        </section>
-
-
-        <!-- sec-1 영역 -->
-        <section class="sec-1 section">
-            <div class="container">
-                <div class="sticky-wrapper">
-                    <span>새로운 감각으로 재탄생한 뉴트럴 컬러</span>
-                    <a href="#none">룩 구매하기</a>
-                </div>
-
-                <div class="mask">
-                    <div class="auto-slider-wrap">
-                        <div class="auto-slider">
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-4.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-5.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-6.jpg" alt="">
-                                </a>
-                            </div>
                         </div>
-                        <div class="auto-slider box2">
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-4.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-5.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="in-auto-slider">
-                                <a href="#none">
-                                    <img src="./img/2-6.jpg" alt="">
-                                </a>
-                            </div>
+                        <div class="icon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+                                <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                            </svg>
+                        </div>
+                        <div class="icon1">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                                <path d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5l-37.3-50.3v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4 .6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5c.7 .6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1 0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4V419.4c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8 0 418.6V92.6C.1 41.4 42.2-.1 93.4 0H419.4c51.2 .1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3s-186.4 67.9-186.4 151.3c0 74.7 66.3 137.4 155.9 149.3c21.8 4.7 19.3 12.7 14.4 42.1c-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"/>
+                            </svg>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- sec-2 영역 -->
-        <section class="sec-2 section">
-            <div class="container">
-                <div class="product-left">
-                    <div class="product-fitting" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="500">
-                        <img src="./img/section2-1.jpg" alt="">
+                    <h3>쇼핑몰 고객센터 080-820-8802</h3>
+                    <span>상담시간: 09:00~18:00(토,일,공휴일 휴무)</span>
+                    <div class="app-box">
+                        <img src="./img/google.png" alt="">
+                        <img src="./img/apple .png" alt="">
                     </div>
                 </div>
-                <div class="product-right"  data-aos="fade-left" data-aos-duration="1500" data-aos-offset="500">
-                    <img src="./img/section2-2.jpg" alt="">
-                </div>
             </div>
-        </section>
-
-        <!-- sec-3 영역 -->
-        <section class="sec-3 section">
-            <div class="container">
-                <ul class="slogan-box">
-                    <li class="animation-txt box1">
-                        <img src="./img/txt-box1.png" alt="">
-                    </li>
-                    <li class="animation-txt box2">
-                        <img src="./img/txt-box2.png" alt="">
-                    </li>
-                </ul>
-                <div class="sec-3-img-box"></div>
-            </div>
-        </section>
-
-        <!-- sec-4 영역 -->
-        <section class="sec-4 section">
-            <div class="container">
-                <ul class="fade-gallery">
-                    <li class="inner-gallery" data-image="./img/4-1.jpg">
-                        <a href="#none">여성</a>
-                    </li>
-                    <li class="inner-gallery" data-image="./img/4-2.jpg">
-                        <a href="#none">남성</a>
-                    </li>
-                    <li class="inner-gallery" data-image="./img/4-3.jpg">
-                        <a href="#none">가방</a>
-                    </li>
-                    <li class="inner-gallery" data-image="./img/4-4.jpg">
-                        <a href="#none">향수</a>
-                    </li>
-                </ul>
-
-                <div class="fade-gallery-photo"></div>
-            </div>
-        </section>
-
-        <!-- footer 영역 -->
-        <section class="footer section">
-            <div class="container">
-                <div class="footer-design">
-                    <img src="./img/footer1.jpg" alt="">
-                </div>
-
-                <div class="footer-t">
-                    <div class="box inner-txt1">
-                        <h1>이메일 등록</h1>
-                        <p>이메일을 등록해 최신 디올 컬렉션, 그리고 다양한 영상에 대한 업데이트를
-                            받아보세요.</p>
-                        <form>
-                            <input type="search" placeholder="이메일*">
-                        </form>
-                    </div>
-                    <div class="box inner-txt2">
-                        <p><a href="#none">매장찾기</a></p>
-                        <p><a href="#none">디올 앱 다운로드</a></p>
-                    </div>
-                    <div class="box inner-txt3">
-                        <h1><a href="#none">고객서비스</a></h1>
-                        <h1><a href="#none">법적고지 · 쿠키</a></h1>
-                        <p><a href="#none">공급망 투명성 및 현대판 노예방지 선언</a></p>
-                        <h1><a href="#none">디올 팔로우</a></h1>
-                        <h1><a href="#none">회사 소개</a></h1>
-                    </div>
-                    <div class="box inner-txt4">
-                        <h1><a href="#none">언어</a></h1>
-                        <p><a href="#none">한국어</a></p>
-                        <h1><a href="#none">배송지</a></h1>
-                        <p><a href="#none">대한민국(₩)</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-b">
-                    <p class="txt-bottom">디올 리미티드 한국지점은 본 웹사이트와 관련하여 공정거래위원회에 통신판매업신고(신고번호: 2021-서울중구-01116)를 필하였습니다. 해당 지점에 대한 자세한 정보는 다음과 같습니다. 주소: 서울특별시 중구 을지로5길 19, 26층(수하동)
-                    <br>이메일: contactdiorkr@christiandior.com  전화번호: 02-3280-0104  사업자등록번호: 120-81-74197  대표자: 트렁히엔트란, Khong May Wan Sharon</p>
-                    <p class="txt-bottom">상품정보에 제공된 내용 외에 저희 제품에 관하여 더 궁금한 사항이 있으시면 고객서비스로 연락해 주시기 바랍니다.</p>
-                </div>
-            </div>
-        </section>
+        </div>
     </div>
 </body>
 </html>
